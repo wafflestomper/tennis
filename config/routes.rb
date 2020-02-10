@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'tennis#player'
-  get 'tennis/new'
-  get 'tennis/record'
-  get 'tennis/stats'
-  get 'tennis/opponent'
-  get 'tennis/delete'
-  get 'tennis/practice'
-  get 'tennis/league'
+  root 'sport#index'
+  get 'sport/league'
+  get 'sport/opponent'
+  get 'sport/player'
+  get 'sport/practice'
+  get 'sport/record'
+  get 'sport/stats'
+
+  resources :sport
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

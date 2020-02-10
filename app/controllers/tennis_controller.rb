@@ -3,6 +3,7 @@ class TennisController < ApplicationController
   end
 
   def record
+    @tennis = Tennis.new
   end
 
   def player
