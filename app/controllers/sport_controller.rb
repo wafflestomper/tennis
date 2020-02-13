@@ -19,4 +19,9 @@ class SportController < ApplicationController
 
   def index
   end
+
+  def new
+    @sport = Sport.new
+  end
+
 end
