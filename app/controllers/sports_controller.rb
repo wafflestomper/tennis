@@ -1,4 +1,4 @@
-class SportController < ApplicationController
+class SportsController < ApplicationController
   def league
   end
 
@@ -17,8 +17,6 @@ class SportController < ApplicationController
   def stats
   end
 
-  def index
-  end
 
   def new
     @sport = Sport.new
