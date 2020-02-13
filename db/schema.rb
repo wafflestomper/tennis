@@ -10,21 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_11_014144) do
+ActiveRecord::Schema.define(version: 2020_02_13_051254) do
 
   create_table "matches", force: :cascade do |t|
-    t.integer "user_id"
-    t.text "body"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "matchType"
-    t.string "matchDate"
-    t.index ["user_id"], name: "index_matches_on_user_id"
-  end
-
-  create_table "sports", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "opponent_name"
+    t.integer "player_score"
+    t.integer "opponent_score"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index "\"user_id\"", name: "index_matches_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

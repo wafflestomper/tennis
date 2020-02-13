@@ -1,6 +1,5 @@
 class Match < ApplicationRecord
-  belongs_to :user
-  validates :matchDate, presence: true
+  #belongs_to :user
 
 
 end
