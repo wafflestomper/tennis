@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_13_051254) do
+ActiveRecord::Schema.define(version: 2020_02_15_182356) do
 
   create_table "matches", force: :cascade do |t|
     t.string "opponent_name"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_02_13_051254) do
     t.integer "opponent_score"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index "\"user_id\"", name: "index_matches_on_user_id"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
