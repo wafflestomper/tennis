@@ -1,5 +1,6 @@
-class Match < ApplicationRecord
-  #belongs_to :user
+class Match < ApplicationRecord 
+  validates :opponent_name, presence: true
+  validates :opponent_score, presence: true
 
 
 end

@@ -1,1 +1,25 @@
 <h1>Create a new match</h1>
+
+<% if @match.errors.any? %>
+<h2>The following errors prevented the match from being entered</h2>
+<ul>
+  <% @match.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for @match do |f| %>
+  <p>
+    <%= f.label :opponent_name %> <br/>
+    <%= f.text_field :opponent_name %>
+  </p>
+  <p>
+    <%= f.label :opponent_score %> <br/>
+    <%= f.text_field :opponent_score %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
