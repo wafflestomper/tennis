@@ -38,7 +38,7 @@ class MatchesController < ApplicationController
 
   private
     def match_params
-      params.require(:match).permit(:opponent_name, :opponent_score)
+      params.require(:match).permit(:opponent_name, :opponent_score, :league, :match_type, :player_name, :player_score, :notes)
     end
 
 end

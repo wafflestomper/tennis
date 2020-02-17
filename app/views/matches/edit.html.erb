@@ -10,12 +10,32 @@
 
 <%= form_for @match do |f| %>
   <p>
+    <%= f.label :league %><br/>
+    <%= f.text_field :league %>
+  </p>
+  <p>
+    <%= f.label :match_type %><br/>
+    <%= f.text_field :match_type %>
+  </p>
+  <p>
+    <%= f.label :player_name %><br/>
+    <%= f.text_field :player_name %>
+  </p>
+  <p>
+    <%= f.label :player_score %><br/>
+    <%= f.text_field :player_score %>
+  </p>
+  <p>
     <%= f.label :opponent_name %><br/>
     <%= f.text_field :opponent_name %>
   </p>
   <p>
     <%= f.label :opponent_score %><br/>
-    <%= f.text_area :opponent_score %>
+    <%= f.text_field :opponent_score %>
+  </p>
+  <p>
+    <%= f.label :notes %><br/>
+    <%= f.text_area :notes %>
   </p>
   <p>
     <%= f.submit %>

@@ -4,13 +4,23 @@
 </p>
 <table>
   <tr>
+    <th>League</th>
+    <th>Match type</th>
+    <th>Player's name</th>
+    <th>Player's score</th>
     <th>Opponent's name</th>
     <th>Opponent's score</th>
+    <th>Notes</th>
   </tr>
   <% @matches.each do |match| %>
   <tr>
+    <td><%= match.league %></td>
+    <td><%= match.match_type %></td>
+    <td><%= match.player_name %></td>
+    <td><%= match.player_score %></td>
     <td><%= match.opponent_name %></td>
     <td><%= match.opponent_score %></td>
+    <td><%= match.notes %></td>
     <td><%= link_to "Edit", edit_match_path(match) %></td>
     <td><%= link_to "Show", match_path(match) %></td>
 
