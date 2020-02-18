@@ -36,9 +36,16 @@ class MatchesController < ApplicationController
     @match = Match.find(params[:id])
   end
 
+  def destroy
+    @match = Match.find(params[:id])
+    @match.destroy
+    flash[:notice] = "Match was successfully deleted"
+    redirect_to matches_path
+  end
+
   private
     def match_params
-      params.require(:match).permit(:opponent_name, :opponent_score, :league, :match_type, :player_name, :player_score, :notes)
+      params.require(:match).permit(:opponent_name, :opponent_score, :league, :match_type, :player_name, :player_score, :notes, :team)
     end
 
 end
